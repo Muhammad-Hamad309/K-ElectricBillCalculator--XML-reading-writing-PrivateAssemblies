@@ -36,6 +36,10 @@
             this.radioCommercial = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.outputLbl = new System.Windows.Forms.Label();
+            this.ReadToXMLBTN = new System.Windows.Forms.Button();
+            this.WriteToXMLBTN = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -101,7 +105,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(379, 125);
+            this.label3.Location = new System.Drawing.Point(369, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 15);
             this.label3.TabIndex = 6;
@@ -111,17 +115,49 @@
             // 
             this.outputLbl.AutoSize = true;
             this.outputLbl.Font = new System.Drawing.Font("Sylfaen", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.outputLbl.Location = new System.Drawing.Point(495, 120);
+            this.outputLbl.Location = new System.Drawing.Point(485, 26);
             this.outputLbl.Name = "outputLbl";
             this.outputLbl.Size = new System.Drawing.Size(18, 25);
             this.outputLbl.TabIndex = 7;
             this.outputLbl.Text = ".";
+            // 
+            // ReadToXMLBTN
+            // 
+            this.ReadToXMLBTN.Location = new System.Drawing.Point(404, 252);
+            this.ReadToXMLBTN.Name = "ReadToXMLBTN";
+            this.ReadToXMLBTN.Size = new System.Drawing.Size(75, 23);
+            this.ReadToXMLBTN.TabIndex = 8;
+            this.ReadToXMLBTN.Text = "Read XML";
+            this.ReadToXMLBTN.UseVisualStyleBackColor = true;
+            this.ReadToXMLBTN.Click += new System.EventHandler(this.ReadToXMLBTN_Click_1);
+            // 
+            // WriteToXMLBTN
+            // 
+            this.WriteToXMLBTN.Location = new System.Drawing.Point(538, 252);
+            this.WriteToXMLBTN.Name = "WriteToXMLBTN";
+            this.WriteToXMLBTN.Size = new System.Drawing.Size(75, 23);
+            this.WriteToXMLBTN.TabIndex = 9;
+            this.WriteToXMLBTN.Text = "Write XML";
+            this.WriteToXMLBTN.UseVisualStyleBackColor = true;
+            this.WriteToXMLBTN.Click += new System.EventHandler(this.WriteToXMLBTN_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(395, 75);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 10;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(752, 329);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.WriteToXMLBTN);
+            this.Controls.Add(this.ReadToXMLBTN);
             this.Controls.Add(this.outputLbl);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.radioCommercial);
@@ -132,6 +168,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Calculate Bill";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,5 +184,8 @@
         private RadioButton radioCommercial;
         private Label label3;
         private Label outputLbl;
+        private Button ReadToXMLBTN;
+        private Button WriteToXMLBTN;
+        private DataGridView dataGridView1;
     }
 }
